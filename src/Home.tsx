@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PRODUCTS, BRAND_SLOGAN } from './constants';
+import { PRODUCTS, BRAND_SLOGAN } from '.';
 import ProductCard from './ProductCard';
 
 const Home: React.FC = () => {
