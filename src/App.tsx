@@ -1,45 +1,36 @@
 App.tsx
 
-import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Products from './pages/Products';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import React from 'react';
+import Navbar from './Navbar';
+import Home from './Home';
+import Products from './Products';
+import About from './About';
+import Contact from './Contact';
+import Footer from './Footer';
+import WhatsAppButton from './WhatsAppButton';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-brandBlack font-sans selection:bg-luxuryGold selection:text-brandBlack">
-        <ScrollToTop />
-        <Navbar />
-        
-        <main className="flex-grow pt-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </Router>
+    <div className="min-h-screen bg-stone-50">
+      <Navbar />
+      <main>
+        <section id="home">
+          <Home />
+        </section>
+        <section id="products">
+          <Products />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
-};
-
-// Helper component to scroll to top on route change
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
+}
 
 export default App;
