@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { PRODUCTS, BRAND_SLOGAN } from './constants';
-import ProductCard from './components/ProductCard';
+import ProductCard from './ProductCard';
 
 const Home: React.FC = () => {
   const featuredProducts = PRODUCTS.slice(0, 3);
