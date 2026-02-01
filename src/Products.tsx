@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { PRODUCTS } from '../constants';
-import ProductCard from '../components/ProductCard';
+import { PRODUCTS } from './constants';
+import ProductCard from './components/ProductCard';
 
 const Products: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'truffles' | 'bars' | 'collections'>('all');
