@@ -3,59 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NA Chocolate | Le coin du chocolat</title>
-    
+    <title>NA Chocolate</title>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        chocolate: { light: '#a5d3a1', DEFAULT: '#3d1c02', dark: '#1e0d01' },
-                        luxuryGold: { light: '#f1e5ac', DEFAULT: '#d4af37', dark: '#aa8c2c' },
-                        brandBlack: '#0a0a0a',
-                    },
-                    fontFamily: {
-                        serif: ['Playfair Display', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body { background-color: #0a0a0a; color: #faf9f6; scroll-behavior: smooth; margin: 0; }
-        #root { min-height: 100vh; }
-    </style>
-
     <script type="importmap">
     {
       "imports": {
         "react": "https://esm.sh/react@18.2.0",
-        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-        "react-router-dom": "https://esm.sh/react-router-dom@6.11.2"
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client"
       }
     }
     </script>
 </head>
 <body>
     <div id="root"></div>
-
     <script type="text/babel" data-type="module">
         import React from 'react';
         import ReactDOM from 'react-dom/client';
-        import App from './src/App.tsx'; // تم ضبط المسار ليعمل من المجلد الرئيسي
+        import App from './src/App.tsx';
 
-        const rootElement = document.getElementById('root');
-        if (rootElement) {
-            const root = ReactDOM.createRoot(rootElement);
-            root.render(<App />);
-        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
     </script>
 </body>
 </html>
