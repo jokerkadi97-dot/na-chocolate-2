@@ -1,5 +1,3 @@
-App.tsx
-
 import React from 'react';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -14,18 +12,10 @@ function App() {
     <div className="min-h-screen bg-stone-50">
       <Navbar />
       <main>
-        <section id="home">
-          <Home />
-        </section>
-        <section id="products">
-          <Products />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
+        <section id="home"><Home /></section>
+        <section id="products"><Products /></section>
+        <section id="about"><About /></section>
+        <section id="contact"><Contact /></section>
       </main>
       <Footer />
       <WhatsAppButton />
