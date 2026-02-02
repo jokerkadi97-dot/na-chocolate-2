@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Product } from '../types';
-import { WHATSAPP_NUMBER } from '../constants';
+import { WHATSAPP_NUMBER } from './constants';
 
 interface ProductCardProps {
   product: Product;
