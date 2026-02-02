@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { WHATSAPP_NUMBER } from '../constants';
+import { WHATSAPP_NUMBER } from './constants';
 
 const WhatsAppButton: React.FC = () => {
   const handleClick = () => {
