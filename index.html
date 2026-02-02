@@ -20,7 +20,15 @@
     <script type="text/babel" data-type="module">
         import React from 'react';
         import ReactDOM from 'react-dom/client';
-        import App from './src/App.tsx';
+
+        function App() {
+            return (
+                <div style={{color: 'white', textAlign: 'center', marginTop: '50px', fontFamily: 'sans-serif'}}>
+                    <h1 style={{fontSize: '30px'}}>NA Chocolate</h1>
+                    <p>System is running successfully!</p>
+                </div>
+            );
+        }
 
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
