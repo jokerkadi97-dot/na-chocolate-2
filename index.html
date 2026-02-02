@@ -6,6 +6,7 @@
     <title>NA Chocolate | Le coin du chocolat</title>
     
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
@@ -48,10 +49,13 @@
     <script type="text/babel" data-type="module">
         import React from 'react';
         import ReactDOM from 'react-dom/client';
-        import App from './src/App.tsx';
+        import App from './src/App.tsx'; // تم ضبط المسار ليعمل من المجلد الرئيسي
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<App />);
+        const rootElement = document.getElementById('root');
+        if (rootElement) {
+            const root = ReactDOM.createRoot(rootElement);
+            root.render(<App />);
+        }
     </script>
 </body>
 </html>
